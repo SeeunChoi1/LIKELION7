@@ -1,0 +1,237 @@
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    margin-left: 100px;
+}
+
+.form-inline {
+    margin-left: 400px;
+    margin-right: 380px;
+}
+
+.nav-item {
+    margin-left: 25px;
+    font-size: 25px;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    /* border: solid black 4px; */
+}
+
+.pro {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    /* border: solid blue 4px; */
+}
+
+.heighlight_pro {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 70%;
+    height: 100%;
+    margin: 15px;
+    /* border: solid blue 4px; */
+}
+
+.menu_pro {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 70%;
+    height: 100%;
+    margin-top: 15px;
+    /* border: solid blue 4px; */
+}
+
+.content_pro {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 70%;
+    height: 100%;
+    /* border: solid blue 4px; */
+}
+
+.pro_pic{
+    border-radius: 50%;
+    overflow: hidden;
+    /* border: solid red 4px; */
+}
+
+.text{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    /* border: solid yellowgreen 4px; */
+}
+
+.text1{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    font-size:20px;
+    font-weight: bold;
+    /* border: solid yellowgreen 4px; */
+}
+
+.text2{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    font-size: 15px;
+    /* font-weight: bold; */
+    /* border: solid yellowgreen 4px; */
+}
+
+.setting{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    /* border: solid yellowgreen 4px; */
+    font-size: 30px;
+}
+
+.box0 {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* border: solid black 3px; */
+    flex-direction: column;
+    height: 100%;
+    width: 45%;
+}
+
+.box1 {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    /* border: solid skyblue 3px; */
+    width: 100%;
+}
+
+.box2 {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    /* border: solid skyblue 3px; */
+    width: 100%;
+}
+
+.box3{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: solid skyblue 3px; */
+    width: 100%;
+}
+
+.heighlight{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+    margin-left: 15px;
+
+    /* border: solid pink 3px;  */
+
+}
+
+.heigh_pic{
+    border-radius: 50%;
+    overflow: hidden;
+    height: 130px;
+    width: 130px;
+
+    /* border: solid yellow 3px;  */
+}
+
+.pic_img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.heigh_name {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10%;
+    font-weight: bold;
+    font-size: 14px;
+
+    /* border: solid yellow 3px;  */
+}
+
+.menu {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    /* border: solid skyblue 3px; */
+    width: 10%;
+    height: 70px;
+    font-weight: bold;
+
+}
+
+.posting_box{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    width: 33.333%;
+
+}
+
+.posting{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    height: 350px;
+    width: 100%;
+    padding: 15px;
+
+    /* border: solid pink 3px;  */
+
+}
