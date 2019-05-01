@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    display: -webkit-flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-content: flex-start;
+    -webkit-flex-flow: row wrap;
+    border: red 3px solid;
+}
+
+
+.content{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100px;
+    padding: 20px;
+
+    border: red 3px solid;
+}
+
+.comment{
+    color: red;
+}
+
