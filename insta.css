@@ -69,6 +69,7 @@ div div div div div {
     
     width: 160px;
     height: 160px;
+}
     
 *  {
     box-sizing: border-box;
@@ -148,11 +149,11 @@ div div div div div {
 }
 
 .contents{
-  
     width: 70%;
     margin: 0 auto;
     border-top: 1px solid #dbdbdb;
 }
+
 
 div{
 display: block;
