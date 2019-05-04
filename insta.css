@@ -69,7 +69,8 @@ div div div div div {
     
     width: 160px;
     height: 160px;
-    
+} 
+
 *  {
     box-sizing: border-box;
     margin: 0;
@@ -99,8 +100,13 @@ div div div div div {
 
 .highimg {
     border-radius: 100%;
+    margin: auto;
     width: 76px;
     height: 76px;
+}
+
+.highcaption{
+    text-align: center;
 }
 
 .circle {
