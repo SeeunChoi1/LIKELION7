@@ -15,7 +15,7 @@ def new(request):
             post.save()
         else:
             print(form, form.is_valid())
-        return redirect('home')
+        return redirect('detail', post.pk)
     else:
         form = PostForm()
         return render(request, 'new.html', {'form' : form})
@@ -49,7 +49,7 @@ def comment_delete(request, post_pk, comment_pk):
 def edit(request, post_pk):
     post = Post.objects.get(pk=post_pk)
     if request.method == 'POST':
-        form = PostForm(request.POST, instance=post)
+        form = PostForm(request.POST, request.FILES, instance=post)
         post = form.save(commit=False)
         form.save()
         return redirect('detail', post_pk = post.pk)

@@ -21,7 +21,8 @@
     
     <div class="background">
         <div class="layer">
-            <form method="POST" class="form_new">{% csrf_token %}
+            <form method="POST" class="form_new" enctype="multipart/form-data">
+                {% csrf_token %}
                 {{ form.as_p }}
 
                 <div class="content_div">

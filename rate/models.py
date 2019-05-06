@@ -10,8 +10,8 @@ Book_Rate = (
     (1, '1'),
 )
 
-def get_image_path(instance, filename):
-    return os.path.join('picture', str(instance.id), filename)
+# def get_image_path(instance, filename):
+#     return os.path.join('picture', str(instance.id), filename)
 
 # def photo_url(self):
 #     if self.photo and hasattr(self.photo, 'url'):
@@ -22,7 +22,7 @@ class Post(models.Model):
     contents = models.TextField()
     price = models.PositiveIntegerField(default=0)
     star_rate = models.IntegerField(choices=Book_Rate, default=1)
-    picture = models.FileField(null=True)
+    picture = models.FileField(null=True, default='#')
 
     def __str__(self):
         return self.title
