@@ -9,15 +9,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
 </head>
 
 <body>
     {% block content %}
-    <h2 class="title">{{ post.title }}</h2>
-    <h5 class="price">가격 : {{ post.price }}원</h5>
-    <h5 class="star_rate">별점 : {{ post.star_rate }} / 5 </h5>
-    <h5 class="content" >{{ post.contents }}</h5>
+    <!-- <div class="detail_div"> -->
+        <img class="picture" src="{{ post.picture.url }}" />
+        <h5 class="title">{{ post.title }}</h5>
+        <h5 class="price">가격 : {{ post.price }}원</h5>
+        <h5 class="star_rate">별점 : {{ post.star_rate }} / 5 </h5>
+        <div class="content" >{{ post.contents }}</div>
+    <!-- </div> -->
     
     <div class="comment_box">
         <ul>

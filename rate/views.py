@@ -9,13 +9,16 @@ def home(request):
 
 def new(request):
     if request.method == 'POST':
-        form = PostForm(request.POST)
-        post = form.save(commit=False)
-        form.save()
-        return redirect('detail', post_pk = post.pk)
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.save()
+        else:
+            print(form, form.is_valid())
+        return redirect('home')
     else:
         form = PostForm()
-    return render(request, 'new.html', { 'form' : form })
+        return render(request, 'new.html', {'form' : form})
 
 def detail(request, post_pk):
 

@@ -269,6 +269,39 @@ body{
     font-weight: bold;
 }
 
+.form_new{
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+
+.form_new label{
+    font-weight: bold;
+}
+
+#id_contents{
+    height: 100px;
+    width: 300px;
+}
+
+#id_title{
+    margin-left: 35px;
+}
+
+#id_price{
+    margin-left: 30px;
+}
+
+#id_star_rate{
+    margin-left: 5px;
+}
+
+.content_div{
+    display:flex;
+    justify-content: space-around;
+    margin-top : 40px;
+}
+
 .btn-outline-primary{
     display: flex;
     margin-right:30px;
@@ -277,6 +310,18 @@ body{
 }
 
 /* detail.html */
+.detail_div{
+    display: flex;
+
+}
+
+
+.picture{
+    margin-top : 30px;
+    height: 400px;
+    width: 300px;
+}
+
 .content{
     display: flex;
     justify-content: flex-start;
@@ -306,6 +351,8 @@ body{
 
 }
 
+
+
 .btn-outline-danger{
     margin-bottom: 30px;
 }
@@ -324,12 +371,14 @@ body{
     justify-content: flex-start;
     /* width: 100vw; */
     /* padding-left: 130px; */
-    margin-right: 150px;
+    margin-right: 100px;
+    margin-left: 100px;
 }
+
 
 .comment{
     display: flex;
-    width: 30vw;
+    width: 25vw;
     padding: 10px 10px 15px;
     margin: 10px 0px;;
     align-content: flex-start;
@@ -346,20 +395,18 @@ body{
     align-items: center;
     align-content: center;  
     justify-content: center;
+    margin: 20px 100px 40px 10px;   
 
-    margin: 20px 0px;   
-
-}
-
-.form label{
-    display: flex;
-    color: none;
 }
 
 .form textarea{
     display: flex;
-    height: 50px;
+    height: 70px;
+    width: 350px;
+}
 
+.form label{
+    display : none;
 }
 
 /* edit.html */

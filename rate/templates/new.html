@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
 </head>
 
 <body>
@@ -19,13 +19,19 @@
         <h1>새로운 글쓰기</h1>
     </div>
     
-    <form method="POST">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-outline-primary">제출</button>
-        <button type="button" class="btn btn-outline-primary" onclick="history.back()">뒤로가기</button>
+    <div class="background">
+        <div class="layer">
+            <form method="POST" class="form_new">{% csrf_token %}
+                {{ form.as_p }}
 
-    </form>
-        
+                <div class="content_div">
+                    <button type="submit" class="btn btn-outline-primary">제출</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="history.back()">뒤로가기</button>
+                </div>
+                
+            </form>
+        </div class="layer">
+    </div>
     {% endblock %}
 </body>
 </html>
