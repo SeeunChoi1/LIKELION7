@@ -30,7 +30,8 @@ body{
 }
 
 .menu{
-    line-height: 100px;
+    /* line-height: 100px; */
+    display: flex;
     margin: 0px;
     padding: 0 20px;
 }
@@ -218,11 +219,11 @@ body{
 .list{
     display: flex;
     width: 100vw;
-    padding: 0 70px;
+    padding: 0 60px;
     position: relative;
     flex-wrap: wrap;
 
-    justify-content: space-evenly;
+    justify-content: flex-start;
 
 }
   
@@ -337,18 +338,9 @@ body{
 .price{
     display: flex;
     justify-content: center;
-    width: 30vw;
+    width: 15vw;
     height: auto;
     padding: 20px 0;
-}
-
-.star_rate{
-    display: flex;
-    justify-content: center;
-    width: 30vw;
-    height: auto;
-    padding: 20px 0;
-
 }
 
 
@@ -413,3 +405,44 @@ body{
 .btn-primary{
     margin-bottom: 40px;
 }
+
+/* login.html */
+.form_login{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    
+
+}
+
+.login_h2{
+    display: felx;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+
+}
+
+.login{
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+
+    justify-content: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    
+}    
+
+
+.signin{
+    display: flex;
+    flex-wrap: wrap;
+    width: 330px;
+
+    justify-content: space-between;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    
+}  

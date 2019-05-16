@@ -23,6 +23,7 @@ class Post(models.Model):
     price = models.PositiveIntegerField(default=0)
     star_rate = models.IntegerField(choices=Book_Rate, default=1)
     picture = models.FileField(null=True, default='#')
+    author = models.CharField(max_length=50, default="")
 
     def __str__(self):
         return self.title
@@ -30,4 +31,4 @@ class Post(models.Model):
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     content = models.TextField()
-    id_user = models.CharField(max_length=200, default=0)
+    author = models.CharField(max_length=50, default="")
