@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1" >글씨 반짝반짝</h1>
+    <a href="home.html"><h1>눈아파!!</h1></a>
+
+    <script>
+        let body = document.querySelector('body')
+        let h1 = document.querySelector('#h1')
+
+        setInterval(function(){
+            body.style.backgroundColor = getRandom()
+            h1.style.color = getRandom()
+        }, 500)
+
+        function getRandom(){
+            let bColor = "rgb(" + getNumber() + "," + getNumber() + "," + getNumber() + ")"
+            let hColor = "rgb(" + getNumber() + "," + getNumber() + "," + getNumber() + ")"
+
+            console.log(bColor)
+            console.log(hColor)
+
+            return bColor, hColor
+        }
+        
+        function getNumber(){
+            let Number = Math.floor(Math.random()*255)
+            
+            return Number
+        }
+
+    </script> 
+
+</body>
+</html>
