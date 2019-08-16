@@ -1,0 +1,77 @@
+body{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+h1{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+h2{
+    color: gray;
+}
+
+.textTime{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+}
+
+.textTryAgain{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: gray;
+}
+
+#time{
+    display: flex;
+    width: 500px;
+    height: 150px;
+    margin: 15px 0 ;
+    border: black 1px solid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 50px;
+    /* border: red 1px solid; */
+}
+
+.start{
+    display:flex;
+    justify-content: center;
+    width: 100px;
+    height: 80px;
+    font-size: 25px;
+
+    margin-right: 50px;
+}
+
+.reset{
+    display:flex;
+    justify-content: center;
+    width: 100px;
+    height: 80px;
+    font-size: 25px;
+}
+
+.rap{
+    display: flex;
+    width: 500px;
+    height: 150px;
+    margin: 15px 0;
+    border: black 1px solid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
