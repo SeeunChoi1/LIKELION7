@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <script
+            src="http://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="stopwatch.css">
+    </head>
+
+    <body>
+        <h1>스탑워치<br>Press START!</h1>
+        <div id="time"><h2>Here Shows Time</h2></div>
+        <div class=btns>
+            <button class="start">Start</button>
+            <button class="reset">Reset</button>
+        </div>
+        <h1>Gonna Remember :)</h1>
+        <div class="rap"></div>
+    </body>
+
+    <script>
+        //변수 초기화. 기준시각과 현재시각(현재시각-기준시각=count-up)
+        let sec = 0;
+        let min = 0;
+        let now;
+        let then;
+        let count = 0;
+        
+        
+        $(".start").on("click", function(){
+            $(this).text($(this).text() === "Start" ? "Stop" : "Start");
+
+            //Start"start->stop", then에 시간이 저장됨
+            if ($(this).text() === "Stop"){
+                //console.log("stop임")
+                then = new Date();
+                console.log(then)
+                $("#time").html("Time is ticking!").addClass("textTime").removeClass("textTryAgain");
+            }
+
+            //Start"stop->start" 클릭시, now에 현재 시간이 저장되고 then과 now의 시간차 계산
+            if($(this).text() === "Start"){
+                now = new Date();
+                count += 1;
+                console.log(now)
+                console.log((now-then)/1000)
+                console.log(count)
+                $("#time").html(Math.floor((now-then)/1000) + "초").addClass("textTime").removeClass("textTryAgain");
+                $(".rap").append(count +"번째 : " +''+ Math.floor((now-then)/1000) + "초, ");
+            }
+
+            
+        });
+
+        //Reset 클릭시, div 클리어, Start버튼 reset
+        $(".reset").on("click", function(){
+            console.log("reset")
+            $("#time").html("click START again!").addClass("textTryAgain");
+            $(".start").text("Start")
+        });
+
+    </script>
+</html>
