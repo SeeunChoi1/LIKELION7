@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>제목 : {{ post.title }}</h2>
+    <h5 style = "width : 70%" >{{ post.contents }}</h5>
+    <h5>가격 : {{ post.price }}원</h5>
+    <h5>별점 : {{ post.star_rate }} / 5 </h5>
+    <a href ="{% url 'home' %}">리뷰 목록으로 돌아가기</a>
+</body>
+</html>
