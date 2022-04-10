@@ -1,0 +1,315 @@
+body{
+    display: flex;
+    display: -webkit-flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-content: flex-start;
+    -webkit-flex-flow: row wrap;
+}
+
+/* menu-bar */
+.header{
+    height: 100px;
+    background: #95a5a6;
+    padding-left: 50px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-between;
+    /* margin-bottom: 30px; */
+}
+
+.logo{
+    line-height: 100px;
+    float: left;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.menu{
+    line-height: 100px;
+    margin: 0px;
+    padding: 0 20px;
+}
+
+.menu a{
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.show-menu-btn, .hide-menu-btn{
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+.show-menu-btn {
+    float: right;
+
+}
+
+.show-menu-btn i{
+    line-height: 100px;
+    margin-right: 20px;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+    color: hsla(6, 77%, 57%, 0.726);
+
+}
+
+#chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+.content{
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    -webkit-flex-flow: row wrap;
+
+}
+
+.content img{
+    width: 100%;
+    max-width: 700px;
+    margin: 20px 0;
+}
+
+.content p{
+    text-align: justify;
+}
+
+@media screen and (max-width:800px){
+    .show-menu-btn, .hide-menu-btn{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background: hsla(6, 77%, 57%, 0.726);
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+        z-index: 100;
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .menu a :hover{
+        color:rgba(71, 71, 71);
+    }
+
+    .hide-menu-btn{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #chk:checked ~ .menu{
+        right: 0;
+    }
+}
+
+/* search-bax */
+.search-box{
+    display: flex;
+    justify-content: center;
+    background: none;
+    height: 60px;
+    width: 260px;
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 40px;
+    border: 2px hsla(6, 78%, 57%) solid;
+}
+
+.search-btn{
+    color: rgba(78, 78, 78);
+    float: right;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-txt{
+    border:none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color:rgba(71, 71, 71, 0.849);
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 220px;
+}
+
+.search-box:hover> .search-txt{
+    width: 220px;
+    padding: 0.6px
+}
+
+.search-box:hover> .search-btn{
+    color: hsla(6, 78%, 57%, 0.541);
+    background: rgba(78, 78, 78, 0.233);
+    text-decoration: none;
+}
+
+
+
+.background{
+    display: flex;
+    
+    height: 450px;
+    width: 100vw;
+    /* margin-top: 30px; */
+
+
+    background: url(https://cdn.shopify.com/s/files/1/0172/1910/products/IdealBookshelf1044_LGBTQ_1024x1024.jpg?v=1520986184);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: bottom;
+}
+
+.layer {
+    background-color: rgba(255, 255, 255, 0.75);
+    height: 450px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    -webkit-flex-flow: row wrap;
+}
+
+.background h2{
+    display: flex;
+    color: black;
+    width: 100vw;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 20px;
+    z-index: 1;
+}
+  
+.list{
+    display: flex;
+    width: 100vw;
+    padding: 0 70px;
+    position: relative;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+
+}
+  
+.bookcard{
+    display: flex;
+    flex-wrap: wrap;
+    width: 170px;
+    height: 200px;
+    margin: 30px 30px;
+    justify-content: center;
+    padding: 32px 20px;
+    border-radius: 5px;
+    border: 2px hsla(6, 78%, 57%, 0.541) solid;
+}
+
+.bookcard a{
+    display: flex;
+    height: fit-content;
+    align-content: center;
+    color: black;
+    text-decoration: none;
+
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.view_btn{
+    display: flex;
+    margin-top: 15px;
+}
+
+/* new.html */
+.title{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: fit-content;
+    padding: 30px 100px 40px;
+}
+
+.title h1{
+    font-size:30px;
+    font-weight: bold;
+}
+
+.btn-outline-primary{
+    display: flex;
+    margin-right:30px;
+    margin-bottom: 30px;
+}
+
+/* detail.html */
+.content{
+    display: flex;
+    justify-content: flex-start;
+    width: 100vw;
+    height: fit-content;
+    padding: 30px 100px;
+    font-size: 18px;
+    margin: 10px 160px 50px;
+    background: rgba(78, 78, 78, 0.1);
+    border-radius: 5px;
+}
+
+.price{
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    height: auto;
+    padding: 20px 0;
+}
+
+.star_rate{
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    height: auto;
+    padding: 20px 0;
+
+}
+
+.btn-outline-danger{
+    margin-bottom: 30px;
+}
+
+/* edit.html */
+.btn-primary{
+    margin-bottom: 40px;
+}
