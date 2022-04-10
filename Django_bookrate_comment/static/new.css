@@ -1,0 +1,18 @@
+body{
+    display: flex;
+    display: -webkit-flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-content: flex-start;
+    -webkit-flex-flow: row wrap;
+    border: red 3px solid;
+}
+
+.title{
+    display: flex;
+    border: red 3px solid;
+    width: 300px;
+    height: 300px;
+}

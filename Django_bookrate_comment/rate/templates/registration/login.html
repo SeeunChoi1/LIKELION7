@@ -1,0 +1,22 @@
+{% extends "home.html" %}
+{% load staticfiles %}
+{% load static %}
+
+{% block content %}
+
+<div class="background">
+    <div class="layer">
+        <h2 class="login_h2">로그인</h2>
+        <div class="form_login">
+            <form method="POST" class="login">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-outline-primary">Login</button>
+                <button type="button" class="btn btn-outline-danger" onclick="history.back()">뒤로가기</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

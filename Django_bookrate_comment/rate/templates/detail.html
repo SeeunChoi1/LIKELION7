@@ -1,0 +1,64 @@
+{% extends "home.html" %}
+{% load staticfiles %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+</head>
+
+<body>
+    {% block content %}
+    <!-- <div class="detail_div"> -->
+        <img class="picture" src="{{ post.picture.url }}" />
+        <h5 class="title">{{ post.title }}</h5>
+        <h5 class="price">작성자 : {{user}}</h5>
+        <h5 class="price">가격 : {{ post.price }}원</h5>
+        <h5 class="price">별점 : {{ post.star_rate }} / 5 </h5>
+        <div class="content" >{{ post.contents }}</div>
+    <!-- </div> -->
+        
+    
+    <div class="comment_box">
+        <ul>
+            {% for comment in post.comments.all %}
+            <!-- relatename을 comments로 해서 가능 -->
+            <li class="li">
+                <div class="comment">
+                    <i class="far fa-comment"></i><h5>{{comment.author}}</h5>&nbsp;&nbsp;:&nbsp;&nbsp;{{ comment.content }}
+                </div>
+                {% if user.is_authenticated and comment.author == user.username %}
+                <a href="{% url 'delete_comment' post.pk comment.pk %}" class="btn btn-outline-danger">삭제하기</a>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+
+        {% if user.is_authenticated %}
+        <form method="POST" class="form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-outline-primary">제출</button>
+        </form>
+        {% else %}
+        <h5 class="form">댓글을 작성하기 위해서는 로그인이 필요합니다 : )</h5>
+        {% endif %}
+    </div>
+
+    <a href ="{% url 'home' %}" class="btn btn-outline-primary">리뷰 목록으로 돌아가기</a>
+    <br>
+    {% if user.is_authenticated and post.author == user.username %}
+    <a href ="{% url 'edit' post.pk %}" class="btn btn-outline-primary">수정하기</a>
+    <br>
+    <a href ="{% url 'delete' post.pk %}" class="btn btn-outline-danger">삭제</a>
+    {% endif %}
+
+    
+    {% endblock %}
+</body>
+</html>
