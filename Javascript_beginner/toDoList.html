@@ -1,0 +1,98 @@
+<head>
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="toDoList.css" />
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="title">
+        오늘의 할 일
+        <span>
+          <i id="plus" class="fas fa-plus"></i>
+          <i id ="minus" class="fas fa-minus"></i>
+          <i id="delete_all" class="far fa-trash-alt icon"></i>
+        </span>
+      </div>
+      <input type="text" id="input" />
+  
+      <div class="list">
+        <div>
+          - 멋쟁이사자처럼 교안 짜기
+          <span>
+            <i class="far fa-trash-alt icon"></i>
+          </span>
+        </div>
+        <div>
+          - 기억심리학 과제하기
+          <span>
+            <i class="far fa-trash-alt icon"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+
+      $("#plus").hide()
+
+      // + 버튼 클릭 시, input fade 토글, + -> -
+      $("#plus").on("click", function(){
+        $(this).hide();
+        $("#minus").show();
+        $("#input").fadeToggle();
+      });
+
+      // - 버튼 클릭 시, input fade 토글, - -> +
+      $("#minus").on("click", function(){
+          $(this).hide();
+          $("#plus").show();
+          $("#input").fadeToggle();
+      });
+      
+  
+      // trash icon 클릭 시, 500ms 간 fadeOut 후 사라짐
+      $(document).on("click", ".list div span", function(){
+            console.log("pressed")
+            $(this).parent().fadeOut(500);
+      });
+  
+
+      // 작성된 리스트 누르면 .complete라는 클래스 토글
+      $(document).on("click", ".list div", function(){
+          $(this).toggleClass("complete");
+      });
+  
+
+      // 입력 후 엔터 입력 시, 새로운 리스트 생성
+      $("#input").on("keyup", function(event){
+          if(event.keyCode === 13 && input.value){
+            console.log($("input"))
+            $(".list").append('<div>- ' + $("#input").val() + '<span><i class="far fa-trash-alt icon"></i></span></div>');
+            console.log($("#input:text"))
+            input.value = null
+          }
+      });
+      
+  
+      // 상단의 trash 버튼 클릭 시, 완료된 리스트 모두 삭제
+      $("#delete_all").on("click",function(){
+            //console.log("delete pressed")
+            $(".list div.complete").remove();
+      });
+
+
+
+      
+    </script>
+  </body>
+  
